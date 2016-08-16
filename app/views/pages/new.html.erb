@@ -1,0 +1,13 @@
+<%= form_tag '/town', method: :post do %>
+  <div class="form-group">
+    <%= label_tag :city %>
+    <%= text_field_tag :city, "", placeholder: "Put in your State!", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :state %>
+    <%= text_field_tag :state, "", placeholder: "Put your State! (two letter format, ie. CA)", class: "form-control" %>
+  </div>
+  <div>
+    <%= submit_tag "Get 5 day forecast!" %>
+  </div>
+<% end %>

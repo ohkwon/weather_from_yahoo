@@ -1,0 +1,12 @@
+<table class="table">
+  <tr>
+    <th>City</th>
+    <th>State</th>
+    <th>Today's Temperature</th>
+  </tr>
+  <tr>
+    <td><%= @hometown["query"]["results"]["channel"]["location"]["city"] %></td>
+    <td><%= @hometown["query"]["results"]["channel"]["location"]["region"] %></td>
+    <td><%= @hometown["query"]["results"]["channel"]["item"]["condition"]["temp"] %> Degrees Farenheit</td>
+  </tr>
+</table>

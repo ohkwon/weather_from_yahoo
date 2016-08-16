@@ -1,0 +1,22 @@
+<table class="table">
+  <tr>
+    <th>City</th>
+    <th>State</th>
+    <th>Date</th>
+    <th>Day</th>
+    <th>High</th>
+    <th>Low</th>
+    <th>Description</th>
+  </tr>
+  <% 5.times do |count| %>
+    <tr>
+      <td><%= @hometown["query"]["results"]["channel"]["location"]["city"] %></td>
+      <td><%= @hometown["query"]["results"]["channel"]["location"]["region"] %></td>
+      <td><%= @hometown["query"]["results"]["channel"]["item"]["forecast"][count+1]["date"] %></td>
+      <td><%= @hometown["query"]["results"]["channel"]["item"]["forecast"][count+1]["day"] %></td>
+      <td><%= @hometown["query"]["results"]["channel"]["item"]["forecast"][count+1]["high"] %> Degrees Farenheit</td>
+      <td><%= @hometown["query"]["results"]["channel"]["item"]["forecast"][count+1]["low"] %> Degrees Farenheit</td>
+      <td><%= @hometown["query"]["results"]["channel"]["item"]["forecast"][count+1]["text"] %></td>
+    </tr>
+  <% end %>
+</table>
